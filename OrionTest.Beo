@@ -9,7 +9,7 @@ else
 end
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "EmYeuAnh", HidePremium = false,IntroText = "BuCacCho", SaveConfig = false, ConfigFolder = "AnDepZai"})
+local Window = OrionLib:MakeWindow({Name = "EmYeuAnh", HidePremium = false,IntroText = "BuCacCho", SaveConfig = true, ConfigFolder = "AnDepZai"})
 
 local I = Window:MakeTab({
 	Name = "Info",
@@ -26,7 +26,7 @@ I:AddLabel("Và An Rất Là Đẹp Trai Nhé")
    
      I:AddButton({
 	Name = "invitation Discord",
-	icon = "rbxassetid://16157875068"
+	Icon = "rbxassetid://16157875068"
 	Callback = function()
       setclipboard("https://discord.com/invite/xEtdZkjp")
   	end    
