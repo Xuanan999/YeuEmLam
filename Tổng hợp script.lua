@@ -128,6 +128,28 @@ Tab4:AddButton({
     end)
 
 Tab4:AddButton({
+    Name = "Bay Vào Đảo",
+    Callback = function()
+    game:GetService("Lighting").BaseAtmosphere:Destroy()
+    end)
+for _,v in next, workspace.Map.MysticIsland:GetDescendants() do
+    if v.Name:find("FragChest") then
+                           topos(v.CFrame)
+end
+end
+end)
+
+Tab4:AddButton({
+    Name = "Nhặt Gear",
+    Callback = function()
+        for _,v in next, Workspace.Map.MysticIsland:GetDescendants() do
+    if v.Name:find("Part") and v.ClassName == "MeshPart" then
+                           topos(v.CFrame)
+end
+end
+end)
+
+Tab4:AddButton({
     Name = "Tele Đến Cổng Up",
     Callback = function()
     Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875) 
@@ -153,8 +175,6 @@ Tab4:AddButton({
 				end
 			   	end)
 			   	
-
-
 -------webhook
 local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Trigon" or secure_load and "Sentinel" or KRNL_LOADED and "Krnl" or SONA_LOADED and "Sona" or "Fluxus" or
 "Fluxus"
