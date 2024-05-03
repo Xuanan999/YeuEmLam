@@ -28,7 +28,7 @@ Tab:AddButton({
             Name = "Done!",
             Content = "Đã Sao Chép Link",
             Image = "rbxassetid://16157875068",
-            Time = 1
+            Time = 3
         })
     end    
 })
