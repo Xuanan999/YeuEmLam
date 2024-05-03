@@ -21,9 +21,16 @@ Tab:AddLabel("Script Này Auto Ban")
 
 Tab:AddButton({
     Name = "Join Discord",
-	Callback = function()
+    Callback = function()
         setclipboard("https://discord.com/invite/srJVQj4H")
-  	end    
+    
+        OrionLib:MakeNotification({
+            Name = "Done!",
+            Content = "Đã Sao Chép Link",
+            Image = "rbxassetid://16157875068",
+            Time = 1
+        })
+    end    
 })
 --------------------------------------------------------------------------------------------------------------------------------Scripts No Key
 Tab2:AddButton({
