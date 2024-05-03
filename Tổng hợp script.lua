@@ -9,6 +9,12 @@ local Tab = Window:MakeTab({
 })
 
 local Tab2 = Window:MakeTab({
+	Name = "Status Sever",
+	Icon = "rbxassetid://16157875068",
+	PremiumOnly = false
+})
+
+local Tab3 = Window:MakeTab({
 	Name = "Scripts No Key",
 	Icon = "rbxassetid://16157875068",
 	PremiumOnly = false
@@ -18,13 +24,6 @@ Tab:AddParagraph("Thông Báo","An Siêu Đẹp Trai")
 Tab:AddLabel("Yêu Lưu Gia Bảo Huhu")
 Tab:AddLabel("Script Tao Như Lồn")
 Tab:AddLabel("Script Này Auto Ban")
-
-Tab:AddButton({
-    Name = "Rejoin Sever",
-    Callback = function()
-        game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
-      end    
-})
 
 Tab:AddButton({
     Name = "Join Discord",
@@ -39,8 +38,27 @@ Tab:AddButton({
         })
     end    
 })
---------------------------------------------------------------------------------------------------------------------------------Scripts No Key
+------------------------------------------------Status Sever
 Tab2:AddButton({
+    Name = "Copy Job Id",
+    Callback = function()
+        setclipboard(tostring(game.JobId))
+      OrionLib:MakeNotification({
+            Name = "Done!",
+            Content = "Đã Sao Chép Job Id",
+            Image = "rbxassetid://16157875068",
+            Time = 7
+        })
+    end    
+})
+Tab2:AddButton({
+    Name = "Rejoin Sever",
+    Callback = function()
+        game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
+      end    
+})
+--------------------------------------------------------------------------------------------------------------------------------Scripts No Key
+Tab3:AddButton({
 	Name = "W-azure",
 	Callback = function()
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
@@ -49,12 +67,12 @@ loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc61
             Name = "Done!",
             Content = "Script Đang Lên",
             Image = "rbxassetid://16157875068",
-            Time = 7
+            Time = 3
         })
     end    
 })
 
-Tab2:AddButton({
+Tab3:AddButton({
     Name = "Redz Hub",
 	Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
@@ -63,12 +81,12 @@ Tab2:AddButton({
             Name = "Done!",
             Content = "Script Đang Lên",
             Image = "rbxassetid://16157875068",
-            Time = 7
+            Time = 3
         })
     end    
 })
 
-Tab2:AddButton({
+Tab3:AddButton({
     Name = "Night Hub",
 	Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/NIGHTHUBONTOP/Main/main/LoaderScript.lua"))()
@@ -77,12 +95,12 @@ Tab2:AddButton({
             Name = "Done!",
             Content = "Script Đang Lên",
             Image = "rbxassetid://16157875068",
-            Time = 7
+            Time = 3
         })
     end    
 })
 
-Tab2:AddButton({
+Tab3:AddButton({
     Name = "Min XT",
 	Callback = function()
         loadstring(game:HttpGet"https://raw.githubusercontent.com/Basicallyy/Basicallyy/main/MinGamingPremiumVietSub.lua")()
@@ -91,7 +109,7 @@ Tab2:AddButton({
             Name = "Done!",
             Content = "Script Đang Lên",
             Image = "rbxassetid://16157875068",
-            Time = 7
+            Time = 3
         })
     end    
 })
