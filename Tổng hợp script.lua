@@ -21,3 +21,10 @@ Tab:AddButton({
         loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
   	end    
 })
+
+Tab:AddButton({
+    Name = "Join Discord",
+	Callback = function()
+        setclipboard(https://discord.com/invite/srJVQj4H)
+  	end    
+})
