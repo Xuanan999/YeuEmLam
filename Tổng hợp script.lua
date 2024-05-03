@@ -2,6 +2,12 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 
 local Window = OrionLib:MakeWindow({Name = "AnDepZai - BloxFruit", HidePremium = false, SaveConfig = true, ConfigFolder = "andepzai"})
 
+local Tab2 = Window:MakeTab({
+	Name = "Infor",
+	Icon = "rbxassetid://16157875068",
+	PremiumOnly = false
+})
+
 local Tab = Window:MakeTab({
 	Name = "Scripts No Key",
 	Icon = "rbxassetid://16157875068",
@@ -23,8 +29,35 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
+    Name = "Night Hub",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/NIGHTHUBONTOP/Main/main/LoaderScript.lua"))()
+  	end    
+})
+
+Tab:AddButton({
+    Name = "Redz Hub",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+  	end    
+})
+
+Tab:AddButton({
+    Name = "Min XT",
+	Callback = function()
+        loadstring(game:HttpGet"https://raw.githubusercontent.com/Basicallyy/Basicallyy/main/MinGamingPremiumVietSub.lua")()
+  	end    
+})
+
+Tab:AddParagraph("Yêu Lưu Gia Bảo Huhu")
+Tab:AddLabel("Script Tao Như Lồn")
+Tab:AddLabel("Script Này Auto Ban")
+
+Tab2:AddButton({
     Name = "Join Discord",
 	Callback = function()
         setclipboard("https://discord.com/invite/srJVQj4H")
   	end    
 })
+
+
