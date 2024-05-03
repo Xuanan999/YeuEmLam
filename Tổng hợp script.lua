@@ -25,6 +25,6 @@ Tab:AddButton({
 Tab:AddButton({
     Name = "Join Discord",
 	Callback = function()
-        setclipboard(https://discord.com/invite/srJVQj4H)
+        setclipboard("https://discord.com/invite/srJVQj4H")
   	end    
 })
