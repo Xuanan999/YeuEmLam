@@ -96,6 +96,10 @@ local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "Prot
                                             ["value"]= "```Script Tong Hop```",
                                             ["inline"]= true
                                         },
+                                        {
+                                            ["name"]= Code Sever
+                                            ["value"]="```game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId,'..'\''..tostring(game.JobId)..'\''..')```"
+                                        },
 
                                     }              
                                 }
