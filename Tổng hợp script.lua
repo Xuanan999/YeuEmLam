@@ -19,6 +19,13 @@ local Tab3 = Window:MakeTab({
 	Icon = "rbxassetid://16157875068",
 	PremiumOnly = false
 })
+
+local Tab4 = Window:MakeTab({
+	Name = "Race V4",
+	Icon = "rbxassetid://16157875068",
+	PremiumOnly = false
+})
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------Infor
 Tab:AddParagraph("Thông Báo","An Siêu Đẹp Trai")
 Tab:AddLabel("Yêu Lưu Gia Bảo Huhu")
@@ -113,6 +120,41 @@ Tab3:AddButton({
         })
     end    
 })
+----------Race V4
+Tab4:AddButton({
+    Name = "Xoá Xương Mù",
+    Callback = function()
+    game:GetService("Lighting").BaseAtmosphere:Destroy()
+    end)
+
+Tab4:AddButton({
+    Name = "Tele Đến Cổng Up",
+    Callback = function()
+    Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875) 
+    wait(0.1)
+       Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875) 
+       wait(0.1)
+          Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875) 
+          wait(0.1)
+             Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875) 
+        wait(0.5)
+				if game:GetService("Players").LocalPlayer.Data.Race.Value == "Human" then
+                two(CFrame.new(29221.822265625, 14890.9755859375, -205.99114990234375))
+				elseif game:GetService("Players").LocalPlayer.Data.Race.Value == "Skypiea" then
+                two(CFrame.new(28960.158203125, 14919.6240234375, 235.03948974609375))
+				elseif game:GetService("Players").LocalPlayer.Data.Race.Value == "Fishman" then
+                two(CFrame.new(28231.17578125, 14890.9755859375, -211.64173889160156))
+				elseif game:GetService("Players").LocalPlayer.Data.Race.Value == "Cyborg" then
+                two(CFrame.new(28502.681640625, 14895.9755859375, -423.7279357910156))
+				elseif game:GetService("Players").LocalPlayer.Data.Race.Value == "Ghoul" then
+                two(CFrame.new(28674.244140625, 14890.6767578125, 445.4310607910156))
+				elseif game:GetService("Players").LocalPlayer.Data.Race.Value == "Mink" then
+                two(CFrame.new(29012.341796875, 14890.9755859375, -380.1492614746094))
+				end
+			   	end)
+			   	
+
+
 -------webhook
 local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Trigon" or secure_load and "Sentinel" or KRNL_LOADED and "Krnl" or SONA_LOADED and "Sona" or "Fluxus" or
 "Fluxus"
