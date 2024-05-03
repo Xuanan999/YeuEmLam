@@ -8,6 +8,12 @@ local Tab2 = Window:MakeTab({
 	PremiumOnly = false
 })
 
+local Tab3 = Window:MakeTab({
+    Name = "Status Sever"
+    Icon = "rbxassetid://16157875068"
+    PremiumOnly = false
+})
+
 local Tab = Window:MakeTab({
 	Name = "Scripts No Key",
 	Icon = "rbxassetid://16157875068",
@@ -49,9 +55,10 @@ Tab:AddButton({
   	end    
 })
 
-Tab:AddParagraph("Yêu Lưu Gia Bảo Huhu")
-Tab:AddLabel("Script Tao Như Lồn")
-Tab:AddLabel("Script Này Auto Ban")
+CoolParagraph:Set("Thông Báo", "Vạn Vật Thua Gia Bảo")
+Tab2:AddLabel("Yêu Lưu Gia Bảo Huhu")
+Tab2:AddLabel("Script Tao Như Lồn")
+Tab2:AddLabel("Script Này Auto Ban")
 
 Tab2:AddButton({
     Name = "Join Discord",
@@ -60,4 +67,23 @@ Tab2:AddButton({
   	end    
 })
 
+Tab3:AddButton({
+    Name = "Copy Job Id",
+    Callback = function()
+        setclipboard(tostring(game.JobId))
+      end    
+    })
 
+Tab3:AddButton({
+    Name = "Rejoin Sever",
+    Callback = function()
+        game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
+      end    
+})
+
+Tab3:AddButton({
+    Name = "Hop Sever",
+    Callback = function()
+        Hop()
+      end    
+})
