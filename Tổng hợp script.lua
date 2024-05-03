@@ -8,12 +8,6 @@ local Tab2 = Window:MakeTab({
 	PremiumOnly = false
 })
 
-local Tab3 = Window:MakeTab({
-    Name = "Status Sever"
-    Icon = "rbxassetid://16157875068"
-    PremiumOnly = false
-})
-
 local Tab = Window:MakeTab({
 	Name = "Scripts No Key",
 	Icon = "rbxassetid://16157875068",
@@ -65,25 +59,4 @@ Tab2:AddButton({
 	Callback = function()
         setclipboard("https://discord.com/invite/srJVQj4H")
   	end    
-})
-
-Tab3:AddButton({
-    Name = "Copy Job Id",
-    Callback = function()
-        setclipboard(tostring(game.JobId))
-      end    
-    })
-
-Tab3:AddButton({
-    Name = "Rejoin Sever",
-    Callback = function()
-        game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
-      end    
-})
-
-Tab3:AddButton({
-    Name = "Hop Sever",
-    Callback = function()
-        Hop()
-      end    
 })
