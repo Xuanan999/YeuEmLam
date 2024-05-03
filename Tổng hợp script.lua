@@ -28,7 +28,7 @@ Tab:AddButton({
             Name = "Done!",
             Content = "Đã Sao Chép Link",
             Image = "rbxassetid://16157875068",
-            Time = 3
+            Time = 7
         })
     end    
 })
@@ -67,3 +67,42 @@ Tab2:AddButton({
         loadstring(game:HttpGet"https://raw.githubusercontent.com/Basicallyy/Basicallyy/main/MinGamingPremiumVietSub.lua")()
   	end    
 })
+-------webhook
+local HttpService = game:GetService("HttpService")
+
+-- Xây dựng dữ liệu để gửi
+local Data = {
+    ["embeds"] = {
+        {            
+            ["title"] = "Profile",
+            ["url"] = "https://www.roblox.com/users/"..game.Players.LocalPlayer.UserId,
+            ["description"] = "```"..game.Players.LocalPlayer.DisplayName.." ("..game.Players.LocalPlayer.Name..") ```",
+            ["color"] = tonumber(322852),
+            ["thumbnail"] = {["url"] = "https://cdn.discordapp.com/attachments/1214650224161726544/1235943849537568828/IMG_1714652535034_1714652539506.jpg?ex=663635e8&is=6634e468&hm=a5530ef6d0795650fb1590e218c3e56e0985481f3261dd5a406ed61a4d33bce5&"},
+            ["fields"] = {
+                {
+                    ["name"] = "Execute",
+                    ["value"] = "```"..ExecutorUsing.."```",
+                    ["inline"] = true
+                },
+                {
+                    ["name"] = "Age",
+                    ["value"] = "```"..game.Players.LocalPlayer.AccountAge.." Days```",
+                    ["inline"] = true
+                },
+                {
+                    ["name"] = "Ty For Use",
+                    ["value"] = "```Script Tong Hop```",
+                    ["inline"] = true
+                },
+            }              
+        }
+    }
+}
+
+-- Chuẩn bị và gửi yêu cầu HTTP
+local Headers = {["Content-Type"]="application/json"}
+local Encoded = HttpService:JSONEncode(Data)
+local Request = http_request or request or HttpPost or syn.request
+local Final = {Url = "https://discord.com/api/webhooks/1212727073123340329/jSrexDnBdFCFIqMJvcKLrEs6zPpnwyKCA5doqu8-mWyLxgyorR3ZQJglfaLvrSDR6H0W", Body = Encoded, Method = "POST", Headers = Headers}
+Request(Final)
