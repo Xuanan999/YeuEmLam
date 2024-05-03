@@ -19,13 +19,6 @@ local Tab3 = Window:MakeTab({
 	Icon = "rbxassetid://16157875068",
 	PremiumOnly = false
 })
-
-local Tab4 = Window:MakeTab({
-	Name = "Race V4",
-	Icon = "rbxassetid://16157875068",
-	PremiumOnly = false
-})
-
 -----------------------------------------------------------------------------------------------------------------------------------------------------------Infor
 Tab:AddParagraph("Thông Báo","An Siêu Đẹp Trai")
 Tab:AddLabel("Yêu Lưu Gia Bảo Huhu")
@@ -119,14 +112,7 @@ Tab3:AddButton({
             Time = 3
         })
     end    
-})
-----------Race V4
-Tab4:AddButton({
-    Name = "Xoá Xương Mù",
-    Callback = function()
-    game:GetService("Lighting").BaseAtmosphere:Destroy()
-    end)
-			   	
+})			   	
 -------webhook
 local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Trigon" or secure_load and "Sentinel" or KRNL_LOADED and "Krnl" or SONA_LOADED and "Sona" or "Fluxus" or
 "Fluxus"
