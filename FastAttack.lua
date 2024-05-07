@@ -1,47 +1,67 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, IntroText = "ConCac", ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Bố Mày Là Nhất", HidePremium = false, SaveConfig = true, IntroText = "ConCac", ConfigFolder = "OrionTest"})
 
 local Tab = Window:MakeTab({
-	Name = "Đầu Buồi",
+	Name = "Misc",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
 local Section = Tab:AddSection({
-	Name = "Fast Attack"
+	Name = "Esp Player"
 
 Tab:AddToggle({
-	Name = "Super Fast Attack",
-	Default = true,
+	Name = "Esp Player",
+	Default = false,
 	Callback = function(Value)
-		-- Hàm super fast attack
-function SuperFastAttack()
-    -- Tìm và chọn quái vật hoặc đối thủ gần nhất
-    local target = game.Workspace.Enemies:FindFirstChildOfClass("Model") or game.Workspace.Players:GetChildren()[1].Character
-    
-    -- Kiểm tra xem có đối tượng nào để tấn công không
-    if target then
-        -- Đặt tốc độ tấn công cao
-        local originalAttackSpeed = target.Humanoid:WaitForChild("AttackSpeed").Value
-        target.Humanoid:WaitForChild("AttackSpeed").Value = 0.5 -- Điều chỉnh giá trị tùy thuộc vào tốc độ mong muốn
-        
-        -- Tiến hành tấn công
-        repeat
-            -- Tấn công quái vật hoặc đối thủ
-            -- Ví dụ: target:FindFirstChild("Sword"):Activate() hoặc sử dụng bất kỳ phương pháp tấn công nào khác
-            
-            wait(0.1) -- Đợi một khoảng thời gian ngắn giữa các lần tấn công
-        until not target.Parent -- Kiểm tra xem quái vật hoặc đối thủ đã chết hay không
-        
-        -- Khôi phục lại tốc độ tấn công ban đầu
-        target.Humanoid:WaitForChild("AttackSpeed").Value = originalAttackSpeed
-    else
-        print("Không có mục tiêu để tấn công.")
+-- ESP Player Lua Script
+
+-- Function to create ESP for players
+local function createESP(player)
+    -- Create a BillboardGui for the player
+    local billboard = Instance.new("BillboardGui")
+    billboard.Name = "PlayerESP"
+    billboard.AlwaysOnTop = true
+    billboard.Size = UDim2.new(0, 100, 0, 20)
+    billboard.StudsOffset = Vector3.new(0, 3, 0) -- Offset above the player's head
+
+    -- Create a TextLabel for the player's name
+    local nameLabel = Instance.new("TextLabel")
+    nameLabel.Parent = billboard
+    nameLabel.Size = UDim2.new(1, 0, 1, 0)
+    nameLabel.BackgroundTransparency = 1
+    nameLabel.Text = player.Name
+    nameLabel.Font = Enum.Font.SourceSansBold
+    nameLabel.TextColor3 = Color3.new(1, 1, 1)
+    nameLabel.TextSize = 14
+
+    -- Attach the BillboardGui to the player's Head
+    local head = player.Character:WaitForChild("Head")
+    billboard.Parent = head
+end
+
+-- Function to update ESP for all players
+local function updateESP()
+    -- Loop through all players in the game
+    for _, player in ipairs(game:GetService("Players"):GetPlayers()) do
+        -- Check if the player has a character and it's not the local player
+        if player.Character and player ~= game:GetService("Players").LocalPlayer then
+            -- Check if the player already has an ESP
+            local existingESP = player.Character:FindFirstChild("PlayerESP")
+            if not existingESP then
+                -- If not, create a new ESP for the player
+                createESP(player)
+            end
+        end
     end
 end
 
--- Sử dụng hàm super fast attack
-SuperFastAttack()
+-- Connect the updateESP function to run when a player joins or respawns
+game:GetService("Players").PlayerAdded:Connect(updateESP)
+game:GetService("Players").PlayerRemoving:Connect(updateESP)
+
+-- Update ESP initially for all existing players
+updateESP()
 	end    
 })
