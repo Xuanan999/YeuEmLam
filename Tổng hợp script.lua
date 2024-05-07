@@ -1,6 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "AnDepZai - BloxFruit", HidePremium = false, SaveConfig = true, ConfigFolder = "andepzai"})
+local Window = OrionLib:MakeWindow({Name = "AnDepZai-BloxFruit", HidePremium = false, SaveConfig = true, ConfigFolder = "andepzai"})
 
 local Tab = Window:MakeTab({
 	Name = "Infor",
@@ -20,6 +20,9 @@ local Tab3 = Window:MakeTab({
 	PremiumOnly = false
 })
 -----------------------------------------------------------------------------------------------------------------------------------------------------------Infor
+local Section = RC:AddSection({
+	Name = "Thông Báo"
+})
 Tab:AddParagraph("Thông Báo","An Siêu Đẹp Trai")
 Tab:AddLabel("Yêu Lưu Gia Bảo Huhu")
 Tab:AddLabel("Script Tao Như Lồn")
@@ -31,7 +34,7 @@ Tab:AddButton({
         setclipboard("https://discord.com/invite/srJVQj4H")
     
         OrionLib:MakeNotification({
-            Name = "Done!",
+            Name = "Thông Báo!",
             Content = "Đã Sao Chép Link",
             Image = "rbxassetid://16157875068",
             Time = 7
@@ -39,12 +42,15 @@ Tab:AddButton({
     end    
 })
 ------------------------------------------------Status Sever
+local Section = Tab2:AddSection({
+	Name = "Sever Status"
+})
 Tab2:AddButton({
     Name = "Copy Job Id",
     Callback = function()
         setclipboard(tostring(game.JobId))
       OrionLib:MakeNotification({
-            Name = "Done!",
+            Name = "Thông Báo!",
             Content = "Đã Sao Chép Job Id",
             Image = "rbxassetid://16157875068",
             Time = 7
@@ -63,8 +69,8 @@ Tab3:AddButton({
 	Callback = function()
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
   	
-  	OrionLib:MakeNotification({
-            Name = "Done!",
+   	OrionLib:MakeNotification({
+            Name = "Thông Báo!",
             Content = "Script Đang Lên",
             Image = "rbxassetid://16157875068",
             Time = 3
@@ -78,7 +84,7 @@ Tab3:AddButton({
         loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
   
   	OrionLib:MakeNotification({
-            Name = "Done!",
+            Name = "Thông Báo!",
             Content = "Script Đang Lên",
             Image = "rbxassetid://16157875068",
             Time = 3
@@ -92,7 +98,7 @@ Tab3:AddButton({
         loadstring(game:HttpGet("https://raw.githubusercontent.com/NIGHTHUBONTOP/Main/main/LoaderScript.lua"))()
   	
   	OrionLib:MakeNotification({
-            Name = "Done!",
+            Name = "Thông Báo!",
             Content = "Script Đang Lên",
             Image = "rbxassetid://16157875068",
             Time = 3
@@ -105,14 +111,14 @@ Tab3:AddButton({
 	Callback = function()
         loadstring(game:HttpGet"https://raw.githubusercontent.com/Basicallyy/Basicallyy/main/MinGamingPremiumVietSub.lua")()
  
-   	OrionLib:MakeNotification({
-            Name = "Done!",
+ 	OrionLib:MakeNotification({
+            Name = "Thông Báo!",
             Content = "Script Đang Lên",
             Image = "rbxassetid://16157875068",
             Time = 3
         })
     end    
-})			   	
+})
 -------webhook
 local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Trigon" or secure_load and "Sentinel" or KRNL_LOADED and "Krnl" or SONA_LOADED and "Sona" or "Fluxus" or
 "Fluxus"
