@@ -19,6 +19,12 @@ local Tab3 = Window:MakeTab({
 	Icon = "rbxassetid://16157875068",
 	PremiumOnly = false
 })
+
+local Tab4 = Window:MakeTab({
+	Name = "Setting",
+	Icon = "rbxassetid://16157875068",
+	PremiumOnly = false
+})
 -----------------------------------------------------------------------------------------------------------------------------------------------------------Infor
 local Section = Tab:AddSection({
 	Name = "Infor"
@@ -117,6 +123,26 @@ Tab3:AddButton({
             Image = "rbxassetid://16157875068",
             Time = 3
         })
+    end    
+})
+-------------seting
+Tab4:AddDropdown({
+    Name = "Select Fast Attack",
+    Default = "Fast Attack",
+    Options = {"Normal Attack"Fast Attack", "Super Fast Attack"},
+    Callback = function(Value)
+        print(Value)
+        DropdownDelayAttack:SetValue("Fast Attack")
+        DropdownDelayAttack:OnChanged(function(Value)
+            _G.FastAttackFaiFao_Mode = Value
+            if _G.FastAttackFaiFao_Mode == "Fast Attack" then
+                _G.Fast_Delay = 0.5
+            elseif _G.FastAttackFaiFao_Mode == "Normal Attack" then
+                _G.Fast_Delay = 0.2
+            elseif _G.FastAttackFaiFao_Mode == "Super Fast Attack" then
+                _G.Fast_Delay = 0.05
+            end
+        end)
     end    
 })
 -------webhook
