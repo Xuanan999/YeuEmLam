@@ -1,36 +1,54 @@
-local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
-local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
-local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = Fluent:CreateWindow({
-    Title = "AnhYeuEm" .. Fluent.Version,
-    SubTitle = "True V2",
-    TabWidth = 160,
-    Size = UDim2.fromOffset(470, 400),
-    Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
-    Theme = "Dark",
-    MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
+OrionLib:MakeNotification({
+	Name = "Bot AnDepZai",
+	Content = "Mẹ Mày Béo",
+	Image = "rbxassetid://4483345998",
+	Time = 5
 })
 
---Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
-local Tabs = {
-    Main = Window:AddTab({ Title = "Infor"}),
-    Settings = Window:AddTab({ Title = "Main"})
-}
+local Window = OrionLib:MakeWindow({Name = "Gay Sex Fat", HidePremium = false, SaveConfig = true, IntroText = "ConCac", ConfigFolder = "OrionTest"})
 
-local Options = Fluent.Options
+local Tab = Window:MakeTab({
+	Name = "MeMayBeo",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+--Tab 1--
+local Section = Tab:AddSection({
+	Name = "Thuốc Nổ"
 
-do   
-    Tabs.Main:AddParagraph({
-        Title = "Thông Tin",
-        Content = "An Rất Đẹp Trai Và Mạnh Hơn Goku!"
-    })
- 
-    Tabs.Main:AddButton({
-        Title = "Join Discord!",
-        Description = "Vô Discord Nếu Muốn!",
-        Callback = function()
-        setclipboard("https://discord.com/invite/srJVQj4H")
-        
-     local Toggle = Tabs.Settings:AddToggle("MyToggle", {Title = "Farm Level", Default = false })
-     
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		spawn(function() 
+    repeat
+        task.wait()
+    until game:IsLoaded()
+    repeat
+        task.wait()
+    until game.Players
+    repeat
+        task.wait()
+    until game.Players.LocalPlayer and game.Players.LocalPlayer.Team ~= nil 
+    wait(1.5)
+    require(game.ReplicatedStorage.Notification).new("<Color=Red>MÀY  😂😂😂ĂN CON CẶC GÌ MÀ NGU VẬY CÓ THẾ CŨNG BỊ LỪA😂😂😂<Color=/>"):Display()
+    wait(.5)
+    require(game.ReplicatedStorage.Notification).new("<Color=Red>MÀY  😂😂😂ĂN CON CẶC GÌ MÀ NGU VẬY CÓ THẾ CŨNG BỊ LỪA😂😂😂<Color=/>"):Display()
+    wait(.14)
+    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>0362374399<Color=/>"):Display()
+    wait(.24)
+    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>MÀY  😂😂😂ĂN CON CẶC GÌ MÀ NGU VẬY CÓ THẾ CŨNG BỊ LỪA😂😂😂<Color=/>"):Display()
+    wait(.29)
+    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>MÀY😂😂😂ĂN CON CẶC GÌ MÀ NGU VẬY CÓ THẾ CŨNG BỊ LỪA😂😂😂 <Color=/>"):Display()
+    wait(.36)
+end)spawn(function()
+    while wait() do
+        for i,v in pairs(game.Players.LocalPlayer:GetChildren()) do
+            if v.Name == "DataLoaded" or v.Name == "DataPreloaded" then
+                v:Destroy()
+            end
+        end
+    end
+end)
+})
