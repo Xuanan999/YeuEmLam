@@ -20,8 +20,8 @@ local Tab3 = Window:MakeTab({
 	PremiumOnly = false
 })
 -----------------------------------------------------------------------------------------------------------------------------------------------------------Infor
-local Section = RC:AddSection({
-	Name = "Thông Báo"
+local Section = Tab:AddSection({
+	Name = "Infor"
 })
 Tab:AddParagraph("Thông Báo","An Siêu Đẹp Trai")
 Tab:AddLabel("Yêu Lưu Gia Bảo Huhu")
