@@ -32,3 +32,12 @@ local Slider = Tabs.Main:AddSlider("Slider", {
             game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
 	end    
 })
+---------Tab Settings
+Tabs.Settings:AddButton({
+        Title = "Copy Link Discord",
+        Description = "",
+        Callback = function()
+        setclipboard("https://discord.com/invite/x6txsSb7"
+        end
+    })
+    
