@@ -1,43 +1,31 @@
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
-
+----------------------------------------------------------------------------------------------------------------------------------------------
 local Window = Fluent:CreateWindow({
-    Title = "AnhYeuEm" .. Fluent.Version,
-    SubTitle = "True V2",
+    Title = "ConCac Hub | Blox Fruits",
+    SubTitle = "Version 2.3",
     TabWidth = 160,
-    Size = UDim2.fromOffset(370, 350),
-    Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
-    Theme = "Dark",
-    MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
+    Size = UDim2.fromOffset(450, 360),
+    Acrylic = true,
+    Theme = "Darker",
+    MinimizeKey = Enum.KeyCode.End
 })
-
 local Tabs = {
-    Main = Window:AddTab({ Title = "Main",}),
-    Settings = Window:AddTab({ Title = "Settings",})
+    Infor = Window:AddTab({ Title = "Infor"}),
 }
-
 local Options = Fluent.Options
-
 do
--------------------------------------------------------------------------------------------------------------------------------------------------Tab Main 
-local Slider = Tabs.Main:AddSlider("Slider", {
-        Title = "Walk Speed",
-        Description = "Tăng Tốc",
-        Default = 20,
-        Min = 16,
-        Max = 500,
-        Rounding = 1,
-        Callback = function(Value)
-            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
-	end    
-})
----------Tab Settings
-Tabs.Settings:AddButton({
-        Title = "Copy Link Discord",
-        Description = "",
-        Callback = function()
-        setclipboard("https://discord.com/invite/x6txsSb7"
-        end
+--------------------------------------------------------------------------------------------------------------------------------------------------------Tab Infor
+Tabs.Infor:AddParagraph({
+        Title = "AnDepZai",
+        Content = "Join Discord Now"
     })
     
+Tabs.Infor:AddButton({
+    Title = "Join Discord",
+    Description = "AnDepZai|Roblox",
+    Callback = function()
+        setclipboard("https://discord.com/invite/WhbaBYRv")
+    end
+})
